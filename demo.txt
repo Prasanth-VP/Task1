@@ -18,3 +18,29 @@ Header Compression: HTTP/1.1 headers are sent in plaintext with each request, le
 Server Push: Another innovative feature introduced in HTTP/2 is server push, which enables servers to preemptively send resources to the client's cache before they are requested. By anticipating the client's needs based on initial requests, server push eliminates the latency associated with subsequent resource fetches. This proactive approach enhances page load times and optimizes resource utilization, particularly for complex web applications with dependencies.
 
 Binary Protocol: Unlike the textual format of HTTP/1.1, which required parsing and interpretation, HTTP/2 adopts a binary framing layer for enhanced efficiency. By encoding data in binary format, HTTP/2 reduces parsing overhead and simplifies protocol implementation. This streamlined approach contributes to faster processing and improved performance across diverse network conditions.
+
+
+Question 2:
+
+Title: Demystifying Objects and Their Internal Representation in JavaScript
+
+In the realm of JavaScript, objects stand as fundamental building blocks, enabling developers to structure and manipulate data in powerful ways. Whether it's representing real-world entities, organizing data collections, or encapsulating functionality, understanding the internal workings of objects is crucial for harnessing the full potential of the language. In this blog, we'll delve into the intricacies of objects in JavaScript, exploring their internal representation and shedding light on key concepts along the way.
+
+Understanding Objects:
+In JavaScript, an object is a composite data type that encapsulates both data (properties) and behavior (methods). Unlike primitive data types such as numbers or strings, objects can hold multiple key-value pairs, making them versatile containers for organizing and accessing structured data. Objects in JavaScript are dynamic, meaning properties can be added, modified, or deleted at runtime, offering flexibility and adaptability in coding scenarios.
+
+Internal Representation:
+Behind the scenes, JavaScript engines employ various data structures and mechanisms to represent objects efficiently. While the exact implementation details may vary across different engines (e.g., V8, SpiderMonkey, JavaScriptCore), certain principles and patterns remain consistent.
+
+Object Properties:
+
+Each object in JavaScript is associated with a hidden internal property known as the [[Prototype]], which references another object called the prototype object. This mechanism forms the basis of prototypal inheritance, allowing objects to inherit properties and methods from their prototypes.
+Properties of an object can be accessed using dot notation (e.g., object.property) or bracket notation (e.g., object['property']). When accessing a property, the JavaScript engine searches the object's own properties first before traversing the prototype chain if the property is not found.
+Property Descriptors:
+
+Each property of an object is accompanied by a property descriptor, which contains metadata about the property's attributes (e.g., writable, enumerable, configurable).
+Property descriptors provide control over property behavior and visibility, allowing developers to define property characteristics such as immutability, enumerability, and configurability.
+Memory Allocation:
+
+Objects in JavaScript are allocated memory dynamically on the heap. When an object is created using object literal syntax (e.g., {}), memory is allocated to store its properties and methods.
+Memory management mechanisms such as garbage collection ensure efficient allocation and deallocation of object memory, preventing memory leaks and optimizing resource utilization.
